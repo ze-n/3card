@@ -20,6 +20,11 @@ body {
   --font-700: 'Big Shoulders Display', cursive;
   --font-400: 'Lexend Deca', sans-serif;
   font-family: var(--font-400);
+  color: var(--Very-light-gray);
+}
+
+a {
+  text-decoration: none;
 }
 
 .section {
@@ -34,128 +39,128 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 4rem 1rem;
 }
 
 .card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 800px;
   border-radius: .5rem;
   overflow: hidden;
-  color: var(--Very-light-gray);
 }
 
 .card-container__card {
-  padding: 3rem 2rem;
-  min-height: 400px;
-  width: 100%;
-  max-width: 300px;
-  color: var(--Very-light-gray);
+  width: 300px;
+  min-height: 300px;
+  padding: 2.5rem;
 }
 
-.card-container__card:first-child {
-  background: var(--bright-orange);
+.card-container__card img {
+  margin-bottom: 2rem;
 }
 
-.card-container__card:nth-child(2) {
-  background: var(--dark-cyan);
-}
-
-.card-container__card:last-child {
-  background: var(--very-dark-cyan);
-}
-
-h2 {
+.card-container__card h2 {
   font-family: var(--font-700);
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-img {
-  display: block;
+  text-transform: uppercase;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
-p {
-  margin-bottom: 5rem;
-  font-size: 15px;
-  line-height: 1.3rem;
+.card-container__card p {
   color: var(--transparent-white);
 }
 
-a {
-  text-decoration: none;
+.card-container__button {
   background: var(--Very-light-gray);
+  font-family: var(--font-400);
   padding: .7rem 1.5rem;
-  border-radius: 40px;
+  display: inline-block;
+  border-radius: 50px;
+  margin-top: 2rem;
   border: 2px solid var(--Very-light-gray);
-  -webkit-transition-property: background, color;
-  transition-property: background, color;
+  -webkit-transition-property: background,color;
+  transition-property: background,color;
   -webkit-transition-duration: .3s;
           transition-duration: .3s;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
 
+.card-container__button:hover, .card-container__button:focus {
+  background: transparent;
+  color: var(--Very-light-gray);
+}
+
+.card1 {
+  background: var(--bright-orange);
+}
+
 .card1 a {
   color: var(--bright-orange);
+}
+
+.card2 {
+  background: var(--dark-cyan);
 }
 
 .card2 a {
   color: var(--dark-cyan);
 }
 
+.card3 {
+  background: var(--very-dark-cyan);
+}
+
 .card3 a {
   color: var(--very-dark-cyan);
 }
 
-a:hover, a:focus {
-  background: none;
-  color: var(--Very-light-gray);
-}
-
 footer {
   width: 100vw;
-  min-height: 4rem;
-  background: black;
-  color: var(--transparent-white);
+  min-height: 3rem;
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: var(--very-dark-cyan);
 }
 
 footer a {
-  padding: 0;
-  border: none;
-  background: none;
-  margin: 0 1ch;
+  margin: 0rem .1rem;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
-@media screen and (max-width: 800px) {
+footer a:hover, footer:focus {
+  opacity: .5;
+}
+
+@media screen and (min-width: 800px) {
   .card-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .card-container__card {
+    width: 300px;
+    padding: 3rem;
+  }
+  .card-container__button {
+    margin-top: 5rem;
   }
   footer {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 /*# sourceMappingURL=style.css.map */
